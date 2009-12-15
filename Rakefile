@@ -28,6 +28,10 @@ task :install do
       link_file(file)
     end
   end
+  print "Reload ~/.profile? [yn] "
+  if $stdin.gets.chomp == 'y'
+    system ". $HOME/.profile"
+  end
 end
 
 def replace_file(file)
