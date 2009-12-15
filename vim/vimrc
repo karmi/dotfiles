@@ -1,0 +1,46 @@
+set background=dark 
+
+colorscheme ir_black 
+
+" Syntax
+syntax enable
+syntax on
+
+" Line numbering
+set number
+
+" Formatting
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set expandtab
+set smarttab
+set backspace=start,indent
+set cinwords=if,else,while,do,for,switch,case
+set cindent
+
+" Highlight search 
+set hlsearch
+
+" Show other possibilites at tab completion
+set wildmenu
+
+" Mapleader
+let mapleader = ","
+
+" Tabs
+"map <C>OD :tabp<CR> " Shift+Left
+"map <C>OC :tabn<CR> " Shift+Right
+map <C-t> :tabnew<CR> " Ctrl+T
+map <leader>t :tabnew<cr>
+
+" NerdTree
+map <leader>d <ESC>:NERDTreeToggle<RETURN> " moves left fa split (http://www.vi-improved.org/vimrc.php)
+let NERDTreeMapActivateNode='<CR>'
+
+" From Jamis Buck
+map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
+let g:fuzzy_ignore = "*.log"
+let g:fuzzy_matching_limit = 70
+map <leader>b :FuzzyFinderBuffer<CR>
