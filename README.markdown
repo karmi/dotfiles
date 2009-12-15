@@ -6,7 +6,7 @@ Installation process based on [Ryan Bates Dot Files](http://github.com/ryanb/dot
 Installation
 ------------
 
-  git clone git://github.com/ryanb/dotfiles ~/.dotfiles
-  cd ~/.dotfiles
-  rake install
+    git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+    cd ~/.dotfiles
+    rake install
 
