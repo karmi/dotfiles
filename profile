@@ -14,7 +14,7 @@ set -o emacs
 # Custom aliases
 # --------------
 alias q='exit'
-alias ll='ls -la'
+alias ll='ls -lah'
 alias rd='rm -rdf'
 
 # Git aliases
