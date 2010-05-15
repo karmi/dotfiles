@@ -1,3 +1,9 @@
+# Links:
+#
+# * http://aperiodic.net/screen/quick_reference
+# * http://polishlinux.org/howtos/screen-tips-tricks/
+# * http://www.pixelbeat.org/lkdb/screen.html
+
 startup_message off
 
 autodetach on
