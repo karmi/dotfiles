@@ -1,7 +1,7 @@
 startup_message off
 
 autodetach on
-defscrollback 30000
+defscrollback 10000
 
 hardstatus on
 hardstatus alwayslastline
@@ -13,6 +13,3 @@ hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
 escape ^Ww
 # Bind screen lists key to SPACE
 bind ' ' windowlist -b
-
-defscrollback 5000
-
