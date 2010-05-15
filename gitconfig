@@ -13,10 +13,11 @@
 	s = status
 	co = commit
 	ca = commit -a
-  l = log --pretty=format:'%Cred%h%Creset ▹ %Cgreen%s%Creset [%ar by %an]'
+  l = log --pretty=format:'%Cred%h%Creset | %Cgreen%s%Creset [%ar by %an]'
   b = branch
   backup = push --mirror backup
 	upstream = log --oneline master..origin/master
+	pending = log --oneline origin/master..master
 
 [core]
 	excludesfile = /Users/karmi/.gitignore
