@@ -49,4 +49,6 @@ alias cd="pathed_cd"
 if [ -f ~/.cdpath ]; then
   cd $(cat ~/.cdpath)
 fi
-#
+
+# use .profile.local for setting machine-specific options
+[[ -f ~/.profile.local ]] && .  ~/.profile.local
