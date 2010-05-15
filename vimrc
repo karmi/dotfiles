@@ -25,3 +25,18 @@ set cindent
 
 " Highlight search 
 set hlsearch
+
+" Case only matters with mixed case expressions
+set ignorecase
+set smartcase
+
+" Show other possibilites at tab completion
+set wildmenu
+
+" Maps autocomplete to tab
+imap <Tab> <C-N>
+
+" Local config
+if filereadable(".vimrc.local")
+  source .vimrc.local
+endif
