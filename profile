@@ -11,6 +11,13 @@ export PS1="\[\e]2;\u@\H:\W\a\[\e[0;30;1m\]\w\[\e[0m\]\n$ \H \[\e[31;1m\]| \[\e[
 # set -o vi
 set -o emacs
 
+# History settings
+# ----------------
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+shopt -s histappend
+
+
 # Custom aliases
 # --------------
 alias q='exit'
