@@ -11,8 +11,8 @@
 
 [alias]
   s = status
-  co = commit
-  ca = commit -a
+  co = commit --verbose
+	ca = commit --all --verbose
   l = log --pretty=format:'%Cred%h%Creset | %Cgreen%s%Creset [%ar by %an]'
   b = branch
   backup = push --mirror backup
