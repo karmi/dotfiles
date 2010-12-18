@@ -51,12 +51,15 @@ end
 require 'pp'
   
 # load rubygems and wirble
-require 'rubygems' rescue nil
-require 'wirble'
+begin
+  require 'rubygems'
+  require 'wirble'
  
-# load wirble (http://www.rubyinside.com/wirble-tab-completion-and-syntax-coloring-for-irb-336.html)
-Wirble.init
-Wirble.colorize
+  # load wirble (http://www.rubyinside.com/wirble-tab-completion-and-syntax-coloring-for-irb-336.html)
+  Wirble.init
+  Wirble.colorize
+rescue
+end
 
 # Load Rails specific settings
 if ENV['RAILS_ENV']
