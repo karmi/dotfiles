@@ -48,12 +48,12 @@ alias grep='GREP_OPTIONS="--color=auto --ignore-case --line-number --context=0 -
 # Open new shells in most recently visited dir (http://gist.github.com/132456)
 #
 pathed_cd () {
-    if [ "$1" == "" ]; then
-        cd
-    else
-        cd "$1"
-    fi
-    pwd > ~/.cdpath
+  if [ "$1" == "" ]; then
+    builtin cd
+  else
+    builtin cd "$1"
+  fi
+  pwd > ~/.cdpath
 }
 alias cd="pathed_cd"
 if [ -f ~/.cdpath ]; then
