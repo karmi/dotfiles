@@ -58,7 +58,7 @@ begin
   # load wirble (http://www.rubyinside.com/wirble-tab-completion-and-syntax-coloring-for-irb-336.html)
   Wirble.init
   Wirble.colorize
-rescue
+rescue LoadError
 end
 
 # Load Rails specific settings
