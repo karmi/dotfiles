@@ -2,6 +2,10 @@
 # Bash profile, reload with `. .profile`
 # ======================================
 
+# Common bin paths
+# ----------------
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/lib/ruby/gems/1.8/gems/bin/:$PATH"
+
 # Custom prompt
 # -------------
 export PS1="\[\e]2;\u@\H:\W\a\[\e[0;30;1m\]\w\[\e[0m\]\n$ \H \[\e[31;1m\]| \[\e[0m\]"
