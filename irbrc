@@ -1,9 +1,11 @@
 #!/usr/bin/ruby
 
+require 'irb/ext/save-history'
+
 IRB.conf[:AUTO_INDENT]  = true
 IRB.conf[:USE_READLINE] = true
 IRB.conf[:SAVE_HISTORY] = 1000
-IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+IRB.conf[:HISTORY_FILE] = "$HOME/.irb_history"
 IRB.conf[:PROMPT_MODE]  = :SIMPLE
 
 begin # ANSI codes
@@ -50,21 +52,17 @@ end
  
 require 'pp'
   
-# load rubygems and wirble
+# Load rubygems and wirble
 begin
   require 'rubygems'
   require 'wirble'
- 
-  # load wirble (http://www.rubyinside.com/wirble-tab-completion-and-syntax-coloring-for-irb-336.html)
   Wirble.init
   Wirble.colorize
 rescue LoadError
 end
 
 # Load Rails specific settings
-if ENV['RAILS_ENV']
-  load File.dirname(__FILE__) + '/.railsrc'
-end
+require File.expand_path('../.railsrc', __FILE__) if defined?(Rails)
 
 # http://dotfiles.org/~sd/.irbrc
 begin # Utility methods
