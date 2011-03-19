@@ -1,32 +1,39 @@
 [user]
-  name = Karel Minarik
-  email = karmi@karmi.cz
+	name  = Karel Minarik
+	email = karmi@karmi.cz
 
 [color]
   ui = always
-  diff = always
-  status = always
-  branch = always
+  diff = auto
+  status = auto
+  branch = auto
   interactive = auto
 
-[alias]
-  s = status
-  co = commit --verbose
-  ca = commit --all --verbose
-  l = log --pretty=format:'%Cred%h%Creset | %Cgreen%s%Creset [%ar by %an]'
-  b = branch
-  backup = push --mirror backup
-  upstream = log --oneline master..origin/master
-  pending = log --oneline origin/master..master
+[rerere]
+	enabled = 1
 
 [core]
-  excludesfile = /Users/karmi/.gitignore
+  excludesfile = $HOME/.gitignore
   pager = less -FXRS
 
 [merge]
   stat = true
 
 [diff]
+  mnemonicprefix = 1
+
+[status]
+  showUntrackedFiles = all
 
 [push]
   default = tracking
+
+[alias]
+  s  = status
+  co = commit --verbose
+  ca = commit --all --verbose
+  l  = log --pretty=format:'%Cred%h%Creset | %Cgreen%s%Creset [%ar by %an]'
+  b  = branch
+  backup   = push --mirror backup
+  upstream = log --oneline master..origin/master
+  pending  = log --oneline origin/master..master
