@@ -29,7 +29,7 @@
   default = tracking
 
 [alias]
-  s  = status
+  s  = status --short --branch
   co = commit --verbose
   ca = commit --all --verbose
   l  = log --pretty=format:'%Cred%h%Creset | %Cgreen%s%Creset [%ar by %an]'
