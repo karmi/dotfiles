@@ -13,7 +13,7 @@
 	enabled = 1
 
 [core]
-  excludesfile = $HOME/.gitignore
+  excludesfile = /Users/karmi/.gitignore
   pager = less -FXRS
 
 [merge]
