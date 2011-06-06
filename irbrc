@@ -61,9 +61,6 @@ begin
 rescue LoadError
 end
 
-# Load Rails specific settings
-require File.expand_path('../.railsrc', __FILE__) if defined?(Rails)
-
 # http://dotfiles.org/~sd/.irbrc
 begin # Utility methods
   def pm(obj, *options) # Print methods
@@ -100,3 +97,6 @@ end
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
 
 alias :q :exit
+
+# Load Rails specific settings
+require File.expand_path('../.railsrc', __FILE__) if defined?(Rails)
