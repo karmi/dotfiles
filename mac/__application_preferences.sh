@@ -21,6 +21,8 @@ function set_application_preferences () {
   /usr/bin/defaults write com.apple.finder 'AnimateWindowZoom' -bool false
   /usr/bin/defaults write com.apple.finder 'DisableAllAnimations' -bool true
 
+  /usr/bin/defaults write NSGlobalDomain 'NSAutomaticWindowAnimationsEnabled' -bool false
+
   /usr/bin/defaults write com.apple.desktopservices 'DSDontWriteNetworkStores' -bool true
 
   /usr/bin/defaults write com.apple.finder 'FXPreferredGroupBy' -string 'Date Added'

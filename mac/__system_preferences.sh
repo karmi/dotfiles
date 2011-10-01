@@ -42,7 +42,7 @@ function set_system_preferences () {
   ## System Preferences > Displays > Display
 
     ### Automatically adjust brightness: off
-    /usr/bin/defaults write com.apple.BezelServices 'dAuto' -bool false
+    /usr/bin/defaults write com.apple.BezelServices 'dAuto' -bool true
 
   ## System Preferences > Keyboard > Keyboard
 
