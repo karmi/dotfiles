@@ -15,7 +15,7 @@ sudo mkdir -p /usr/local
 sudo mkdir -p /usr/local/bin
 sudo chown -R $USER /usr/local
 cd $HOME && mkdir -p homebrew
-curl -L -K https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C homebrew
+curl -# -L -K https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C homebrew
 ln -nfs $HOME/homebrew/bin/brew /usr/local/bin/
 brew update
 
