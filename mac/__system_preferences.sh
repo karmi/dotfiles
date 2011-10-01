@@ -55,13 +55,21 @@ function set_system_preferences () {
   ## System Preferences > Sound
 
     ### Select an alert sound: Uh Oh
-    /usr/bin/defaults write com.apple.systemsound 'com.apple.sound.beep.sound' -string '/System/Library/Sounds/Uh Oh.aiff'
+    if [ -f $HOME/dotfiles/mac/sounds/Uh.aiff ]; then
+      cp $HOME/dotfiles/mac/sounds/Uh.aiff $HOME/Library/Sounds/Uh.aiff
+      /usr/bin/defaults write com.apple.systemsound 'com.apple.sound.beep.sound' -string "~/Library/Sounds/Uh.aiff"
+    fi
 
-    ### Play user interface sound effects
+    ### Lower the volume for alert sound
+    /usr/bin/defaults write com.apple.systemsound 'com.apple.sound.beep.volume' -float 0.4
+
+    ### Play user interface sound effects: false
     /usr/bin/defaults write com.apple.systemsound 'com.apple.sound.uiaudio.enabled' -int 0
 
-    ### FIXME: Play feedback when volume is changed
-    /usr/bin/defaults write -g 'com.apple.sound.beep.feedback' -bool false
+    ### Play feedback when volume is changed: false
+    /usr/bin/defaults write -g "com.apple.sound.beep.feedback" -int 0
+
+    /usr/bin/killall -HUP SystemUIServer
 
   ## System Preferences > Time Machine
 
