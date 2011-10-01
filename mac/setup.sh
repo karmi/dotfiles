@@ -48,6 +48,7 @@ brew install rbenv
 brew install ruby-build
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> .bash_profile
 echo 'eval "$(rbenv init -)"' >> .bash_profile
+exec $SHELL
 
 echo "✓ RBEnv installed"
 
@@ -55,6 +56,7 @@ echo "  → Installing Ruby"
 rbenv install 1.9.3-rc1
 rbenv install 1.8.7-p352
 rbenv global  1.9.3-rc1
+rbenv rehash
 
 echo "✓ Installed Ruby: $(rbenv global)"
 
