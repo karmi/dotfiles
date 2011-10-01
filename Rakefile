@@ -34,10 +34,18 @@ task :install do
   end
 end
 
-namespace :setup do
-  desc "Configure and customize Mac OS X"
-  task :mac do
-    `./mac/setup.sh`
+namespace :mac do
+  desc "Customize settings for Mac OS X"
+  task :customize do
+    system File.expand_path('../mac/customize.sh', __FILE__).to_s
+  end
+  desc "Setup Mac OS X"
+  task :setup do
+    system File.expand_path('../mac/setup.sh', __FILE__).to_s
+  end
+  desc "Remove XCode and install GCC"
+  task :devtools do
+    system File.expand_path('../mac/devtools.sh', __FILE__).to_s
   end
 end
 

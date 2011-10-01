@@ -15,6 +15,9 @@ function set_system_preferences () {
     ### Sidebar icon size: Small
     /usr/bin/defaults write -g 'NSTableViewDefaultSizeMode' -int 1
 
+    # <http://twitter.com/siracusa/statuses/95240123494572032>
+    /usr/bin/defaults write -g 'NSAutomaticWindowAnimationsEnabled' -bool false
+
   ## System Preferences > Dock
 
     ### Size: 32 pixels
@@ -49,32 +52,10 @@ function set_system_preferences () {
     ### Turn off when computer is not used for: 1 min
     /usr/bin/defaults write com.apple.BezelServices 'kDimTime' -int 60
 
-
-  ## System Preferences > Mouse
-
-    ### Move content in the direction of finger movement when scrolling or navigating: off
-    /usr/bin/defaults write -g 'com.apple.swipescrolldirection' -bool false
-
-  ## System Preferences > Trackpad
-
-    ### Active Tab: Point & Click
-    /usr/bin/defaults write com.apple.systempreferences 'trackpad.lastselectedtab' -int 0
-
-  ## System Preferences > Trackpad > Point & Click
-
-    ### FIXME: Tap to click
-    /usr/bin/sudo /usr/bin/defaults write /Library/Preferences/.GlobalPreferences 'com.apple.mouse.tapBehavior' -bool true
-    /usr/bin/defaults -currentHost write -g 'com.apple.mouse.tapBehavior' -bool true
-
-  ## System Preferences > Trackpad > Scroll & Zoom
-
-    ### Scroll direction: natural: no
-    /usr/bin/defaults write -g 'com.apple.swipescrolldirection' -bool false
-
   ## System Preferences > Sound
 
-    ### Select an alert sound: Sosumi
-    /usr/bin/defaults write com.apple.systemsound 'com.apple.sound.beep.sound' -string '"/System/Library/Sounds/Uh Oh.aiff"'
+    ### Select an alert sound: Uh Oh
+    /usr/bin/defaults write com.apple.systemsound 'com.apple.sound.beep.sound' -string '/System/Library/Sounds/Uh Oh.aiff'
 
     ### Play user interface sound effects
     /usr/bin/defaults write com.apple.systemsound 'com.apple.sound.uiaudio.enabled' -int 0
