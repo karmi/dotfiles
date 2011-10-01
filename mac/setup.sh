@@ -6,7 +6,7 @@ echo "‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾�
 echo
 
 echo "  → Clean up Apple Ruby..."
-sudo rm -r /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8
+sudo rm -rf /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8
 sudo gem update --system
 sudo gem clean
 
@@ -15,7 +15,7 @@ sudo mkdir -p /usr/local
 sudo mkdir -p /usr/local/bin
 sudo chown -R $USER /usr/local
 cd $HOME && mkdir -p homebrew
-curl -# -L -K https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C homebrew
+curl -# -L -k https://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C homebrew
 ln -nfs $HOME/homebrew/bin/brew /usr/local/bin/
 brew update
 
