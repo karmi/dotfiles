@@ -39,6 +39,9 @@ function set_application_preferences () {
   /usr/libexec/PlistBuddy "$HOME/Library/Preferences/com.apple.finder.plist" -c 'Delete "StandardViewSettings:ListViewSettings:useRelativeDates" bool'
   /usr/libexec/PlistBuddy "$HOME/Library/Preferences/com.apple.finder.plist" -c 'Add "StandardViewSettings:ListViewSettings:useRelativeDates" bool false'
 
+  # Make ~/Library visible
+  /usr/bin/chflags nohidden $HOME/Library
+
   # [!] Reload Finder
   /usr/bin/sudo /usr/bin/killall Finder
 
