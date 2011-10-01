@@ -53,6 +53,7 @@ echo "✓ RBEnv installed"
 
 echo "  → Installing Ruby"
 rbenv install 1.9.3-rc1
+rbenv install 1.8.7-p352
 rbenv global  1.9.3-rc1
 
 echo "✓ Installed Ruby: $(rbenv global)"
