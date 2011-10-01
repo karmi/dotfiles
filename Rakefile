@@ -5,7 +5,7 @@ desc "Install the dotfiles as symlinks in $HOME directory"
 task :install do
   replace_all = false
   Dir['*'].each do |file|
-    next if %w[Rakefile README.markdown].include? file
+    next if %w[Rakefile README.markdown mac].include? file
     
     if File.exist?(File.join(ENV['HOME'], ".#{file}"))
       if replace_all
@@ -31,6 +31,13 @@ task :install do
   print "Reload ~/.profile? [yn] "
   if $stdin.gets.chomp == 'y'
     system ". $HOME/.profile"
+  end
+end
+
+namespace :setup do
+  desc "Configure and customize Mac OS X"
+  task :mac do
+    `./mac/setup.sh`
   end
 end
 
