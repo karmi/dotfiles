@@ -1,10 +1,5 @@
 #!/bin/sh
 
-DIR=$( dirname "$0" )
-
-source "$DIR/__system_preferences.sh"
-source "$DIR/__application_preferences.sh"
-
 echo "___________________________________________________________"
 echo "★ Customizing, Configuring & Setting Up a Mac OS X System ★"
 echo "‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾"
