@@ -15,6 +15,7 @@ With Git:
 Without Git:
 
     cd $HOME
-    mkdir dotfiles && curl -L https://github.com/karmi/dotfiles/tarball/master | tar xz --strip 1 -C dotfiles
+    mkdir -p dotfiles
+    curl -L -k https://github.com/karmi/dotfiles/tarball/master | tar xz --strip 1 -C dotfiles
     cd dotfiles
     rake install
