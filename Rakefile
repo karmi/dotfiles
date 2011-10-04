@@ -35,6 +35,7 @@ namespace :dotfiles do
     print "Reload ~/.profile? [yn] "
     if $stdin.gets.chomp == 'y'
       system ". $HOME/.profile"
+      system "exec $SHELL"
     end
   end
 end
