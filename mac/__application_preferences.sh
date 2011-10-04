@@ -90,6 +90,7 @@ function set_application_preferences () {
 
     /usr/bin/defaults write com.apple.Safari 'TabCreationPolicy' -int 1
     /usr/bin/defaults write com.apple.Safari 'OpenExternalLinksInExistingWindow' -bool true
+	/usr/bin/defaults write com.apple.Safari 'AlwaysShowTabBar' -bool true
 
     ### Applications / Safari > Advanced
 
