@@ -20,6 +20,7 @@ set -o emacs
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
 shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 # Settings
 # --------
