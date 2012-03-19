@@ -25,6 +25,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 # Settings
 # --------
 unset MAILCHECK
+export LC_CTYPE="en_US.UTF-8"
 
 # Custom aliases
 # --------------
@@ -41,7 +42,6 @@ alias giff="git diff"
 
 alias pick="git cherry-pick"
 alias m="git checkout master"
-alias d="git checkout deploy"
 alias f="git checkout fixes"
 
 # Add color and default options to grep
