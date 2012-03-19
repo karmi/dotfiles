@@ -45,6 +45,9 @@ function set_application_preferences () {
   # [!] Reload Finder
   /usr/bin/sudo /usr/bin/killall Finder
 
+  # Disable "... is an application downloaded from the internet. Are you sure you want to open it?"
+  defaults write com.apple.LaunchServices LSQuarantine -bool NO
+
   ## Applications / iTunes
 
   /usr/bin/defaults write com.apple.iTunes 'disablePing' -bool true
