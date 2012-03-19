@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# TODO: This package is obsolete, see <http://kennethreitz.com/xcode-gcc-and-homebrew.html>
+#       Download from <https://developer.apple.com/downloads/download.action?path=Developer_Tools/command_line_tools_for_xcode__march_2012/command_line_tools_for_xcode.dmg>
+
 echo
 echo "  → Removing DeveloperTools and installing GCC..."
 sudo /Developer/Library/uninstall-devtools –mode=all
