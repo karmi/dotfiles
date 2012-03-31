@@ -56,6 +56,8 @@ function set_application_preferences () {
   /usr/bin/defaults write com.apple.iTunes 'show-store-link-arrows' -bool true
   /usr/bin/defaults write com.apple.iTunes 'invertStoreLinks' -bool true
 
+  # Make ⌘ + F focus the search input in iTunes
+  defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
   ## Applications / iWork
 
