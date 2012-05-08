@@ -1,5 +1,5 @@
 [user]
-	name  = Karel Minarik
+	name = Karel Minarik
 	email = karmi@karmi.cz
 
 [color]
@@ -15,6 +15,7 @@
 [core]
   excludesfile = /Users/karmi/.gitignore
   pager = less -FXRS
+  quotepath = false
 
 [merge]
   stat = true
@@ -28,12 +29,19 @@
 [push]
   default = tracking
 
+[blame]
+  date = short
+
 [alias]
   s  = status --short --branch
   co = commit --verbose
   ca = commit --all --verbose
-  l  = log --pretty=format:'%Cred%h%Creset | %Cgreen%s%Creset [%ar by %an]'
+  l  = log --pretty=format:'%C(yellow)%h%Creset ‣ %C(yellow)%s%Creset [%ar by %an]'
   b  = branch
   backup   = push --mirror backup
   upstream = log --oneline master..origin/master
   pending  = log --oneline origin/master..master
+[browser "gitscm"]
+	cmd = /bin/sh -c 'open http://git-scm.com/docs/$(basename $1 .html)' --
+[help]
+	browser = gitscm
