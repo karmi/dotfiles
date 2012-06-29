@@ -48,6 +48,10 @@ alias f="git checkout fixes"
 # -------------------------------------
 alias grep='GREP_OPTIONS="--color=auto --ignore-case --line-number --context=0 --exclude=*.log" GREP_COLOR="1;37;41" LANG=C grep'
 
+# Copy current working directory to clipboard on Mac OS X
+# -------------------------------------------------------
+alias cwd="pwd | tr -d '\n' | pbcopy"
+
 # Tricks
 # ------
 # Open new shells in most recently visited dir (http://gist.github.com/132456)
