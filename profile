@@ -50,7 +50,7 @@ alias grep='GREP_OPTIONS="--color=auto --ignore-case --line-number --context=0 -
 
 # Copy current working directory to clipboard on Mac OS X
 # -------------------------------------------------------
-alias cwd="pwd | tr -d '\n' | pbcopy"
+alias cwd='pwd | tr -d "\n" | pbcopy; echo "Copied: $(pwd)"'
 
 # Tricks
 # ------
