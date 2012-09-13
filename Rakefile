@@ -10,7 +10,7 @@ namespace :dotfiles do
     replace_all = false
     Dir['*'].each do |file|
       next if %w[Rakefile README.markdown mac].include? file
-    
+
       if File.exist?(File.join(ENV['HOME'], ".#{file}"))
         if replace_all
           replace_file(file)
@@ -52,6 +52,12 @@ namespace :mac do
   desc "Remove XCode and install GCC"
   task :devtools do
     system File.expand_path('../mac/devtools.sh', __FILE__).to_s
+  end
+  desc "Setup a new Mac OS X"
+  task :install do
+    Rake::Task["mac:devtools"].invoke
+    Rake::Task["mac:setup"].invoke
+    Rake::Task["mac:customize"].invoke
   end
 end
 
