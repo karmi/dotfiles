@@ -101,6 +101,12 @@ function set_application_preferences () {
 
     /usr/bin/defaults write com.apple.Safari 'IncludeDevelopMenu' -bool true
 
+
+  ## Applications / TextMate 2
+
+  defaults write com.macromates.TextMate.preview htmlOutputPlacement window
+
+
   ## Utilities / Disk Utility
 
   /usr/bin/defaults write com.apple.DiskUtility 'DUDebugMenuEnabled' -bool true
