@@ -33,6 +33,9 @@ function set_system_preferences () {
     ### Minimize windows using: Scale effect
     /usr/bin/defaults write com.apple.dock 'mineffect' -string 'scale'
 
+    ### Disable application bounces
+    /usr/bin/defaults write com.apple.dock no-bouncing -bool TRUE
+
 
   ## System Preferences > Mission Control
 
