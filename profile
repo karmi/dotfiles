@@ -4,7 +4,7 @@
 
 # Common bin paths
 # ----------------
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/lib/ruby/gems/1.8/gems/bin/:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/local/lib/ruby/gems/1.8/gems/bin:$PATH"
 
 # Custom prompt
 # -------------
