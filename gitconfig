@@ -37,6 +37,7 @@
   co = commit --verbose
   ca = commit --all --verbose
   cu = commit --amend --verbose --date="$(date)"
+  pr = fetch origin pull/$1/head:issues/$1
   l  = log --pretty=format:'%C(yellow)%h%Creset ‣ %C(yellow)%s%Creset [%ar by %an]'
   b  = branch
   backup   = push --mirror backup
