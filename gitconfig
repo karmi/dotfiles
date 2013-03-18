@@ -36,10 +36,11 @@
   s  = status --short --branch
   co = commit --verbose
   ca = commit --all --verbose
-  cu = commit --amend --verbose --date="$(date)"
-  pr = fetch origin pull/$1/head:issues/$1
+  cu = commit --amend --verbose --date="`date`"
+  pr = "!pr() { echo $1; git fetch origin pull/$1/head:issues/$1; git checkout issues/$1 }; pr"
   l  = log --pretty=format:'%C(yellow)%h%Creset ‣ %C(yellow)%s%Creset [%ar by %an]'
   b  = branch
+  d  = log --oneline HEAD --not master
   backup   = push --mirror backup
   upstream = log --oneline master..origin/master
   pending  = log --oneline origin/master..master
