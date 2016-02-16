@@ -36,11 +36,11 @@
   s  = status --short --branch
   co = commit --verbose
   ca = commit --all --verbose
-  cu = commit --amend --verbose --date="`date`"
+  cu = commit --amend --verbose --date=$(date '+%Y-%m-%dT%H:%M:%S%z' | tr -d "\n")
   pr = "!pr() { git fetch -v origin pull/$1/head:issues/$1; git checkout issues/$1; }; pr"
   l  = log --pretty=format:'%C(yellow)%h%Creset ‣ %C(yellow)%s%Creset [%ar by %an]'
   b  = branch
-  d  = log --oneline HEAD --not master
+  d  = log --oneline HEAD --not master --decorate --graph
   backup   = push --mirror backup
   upstream = log --oneline master..origin/master
   pending  = log --oneline origin/master..master
@@ -49,3 +49,5 @@
 	cmd = /bin/sh -c 'open http://git-scm.com/docs/$(basename $1 .html)' --
 [help]
 	browser = gitscm
+[credential]
+	helper = osxkeychain
