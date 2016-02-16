@@ -76,9 +76,10 @@ function set_application_preferences () {
 
   ## Applications / Mail
 
-  # /usr/bin/defaults write com.apple.mail 'PreferPlainText' -bool true
+  /usr/bin/defaults write com.apple.mail 'PreferPlainText' -bool true
   /usr/bin/defaults write com.apple.mail 'DisableReplyAnimations' -bool true
   /usr/bin/defaults write com.apple.mail 'DisableSendAnimations' -bool true
+  /usr/bin/defaults write com.apple.mail 'AddressesIncludeNameOnPasteboard' -bool false
 
   ## Applications / Safari
 

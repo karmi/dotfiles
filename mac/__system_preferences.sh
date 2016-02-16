@@ -36,6 +36,9 @@ function set_system_preferences () {
     ### Disable application bounces
     /usr/bin/defaults write com.apple.dock no-bouncing -bool TRUE
 
+    ### Transparent Dock
+    defaults write com.apple.dock hide-mirror -bool true;
+
 
   ## System Preferences > Mission Control
 
