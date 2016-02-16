@@ -46,7 +46,7 @@ alias f="git checkout fixes"
 
 # Add color and default options to grep
 # -------------------------------------
-alias grep='GREP_OPTIONS="--color=auto --ignore-case --line-number --context=0 --exclude=*.log" GREP_COLOR="1;37;41" LANG=C grep'
+alias grep='GREP_OPTIONS="--color=auto --ignore-case --line-number --context=0" GREP_COLOR="1;37;41" LANG=C grep'
 
 # Copy current working directory to clipboard on Mac OS X
 # -------------------------------------------------------
